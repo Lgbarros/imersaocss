@@ -1,0 +1,314 @@
+/*Reset do CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-image:url('../img/fundo.png');
+    background-size: auto 100vh;
+    font-family: 'Source Code Pro', monospace;
+    height: 100vh;
+    font-size: 10px;
+  }
+
+/*Se a tela tiver pelo menos 400px vai carregar estes estilos */  
+@media(min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .menu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .menu ul {
+    display: flex;  
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .menu a:hover {
+    background-color: purple;
+    color: whitesmoke;
+    transition: background-color 2s, color 1s;
+  }
+
+  a {
+    color: purple;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes typing {
+    from{
+      width: 0;
+    }
+    to{
+      width: 14.4em;
+    }
+  }
+  .typing-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 1s normal both;
+  }
+  @keyframes blinkCursor {
+    from{
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to{
+      border-right-color: transparent;
+    }
+  }
+  @keyframes subtitle-animation {
+    100%{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .site-subtitle,
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 2px 2px black;
+  }
+  
+.site-title {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-family: 'Old Standard TT', serif;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .site-subtitle {
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
+  }
+
+  .sobre,
+  .contato,
+  .projetos{
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  @media(min-width: 1200px) {
+    .sobre,
+    .contato,
+    .projetos{
+      .container{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+      }
+    }
+  }
+
+  .sobre a {
+    color: cyan;
+  }
+
+  .sobre .avatar {
+    float: right;
+    margin-left: 2em;
+  }
+
+  .sobre .avatar img{
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    width: 45vh;
+    height: 60vh;
+
+    border: 3px solid #662e9b;
+    border-top-color: rgb(102, 46, 155);
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-right-color: rgb(102, 46, 155);
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-bottom-color: rgb(102, 46, 155);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-left-color: rgb(102, 46, 155);
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+  }
+
+  .sobre p {
+    color: whitesmoke;
+    text-indent: 1em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+  }
+
+  .sobre h2,
+  .contato h2,
+  .projetos h2 {
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 7px;
+  }
+  
+
+.projetos figure {
+  text-align: center;
+  align-content: center;
+}
+
+.img-portfolio {
+   width: 240px;
+   height: 100%;
+   border-radius: 30%;
+}
+
+.img-portfolio:hover {
+  transform: scale(500ms);
+}
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 30%;
+}
+
+.card-back {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+@media (min-width:1200px) {
+  .img-portfolio {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;,
+    }
+  }
+
+.projetos .grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 240px 240px;
+}
+
+
+@media (min-width:560px) {
+  .projetos .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+@media (min-width:880px) {
+  .projetos .grid {
+      grid-template-columns: repeat(2, 240px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+
+.contato .icons {
+padding-top: 10%;
+text-align: center;
+}
+
+.contato a {
+  color: blueviolet;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:hover {
+text-decoration: none;
+text-shadow: 1px 1px 10px rgba(255, 255, 255, 5);
+}
+
+.redes-sociais {
+  opacity: 0.7;
+  background-image: linear-gradient(purple, black);
+  border-radius: 10%;
+  margin: 10%;
+  padding: 2%;
+}
+
+.fundo-projeto {
+  opacity: 0.7;
+  background-image: linear-gradient(purple, black);
+  border-radius: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#footer {
+  position: absolute;
+  text-align: center;
+  color: purple;
+  background-color: whitesmoke;
+}
