@@ -8,7 +8,7 @@ O projeto foi feito utilizando as linguagens de marcação HTML5 e CSS3.
 
 Para visualização do projeto, pode-se conferir no link do GitHub Pages: https://lgbarros.github.io/imersaocss/
 ##
-## CSS immersion - EN
+# CSS immersion - EN
 
 Page made during the ***CSS Immersion*** made by the Alura group.
 
